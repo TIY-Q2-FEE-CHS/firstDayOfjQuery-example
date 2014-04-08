@@ -8,10 +8,10 @@ $(document).ready(function() {
   // show related page in left column
   $(".welcomeLink").click(function(event) {
   		event.preventDefault();
-  		if($(this).attr("rel").hasClass("show")) {
+  		if($welcome.hasClass("show")) {
   			return;
   		} else {
-  		$(this).attr("rel").siblings().removeClass("show");
+  		$welcome.siblings().removeClass("show");
   			$welcome.addClass("show");
   		}
 
