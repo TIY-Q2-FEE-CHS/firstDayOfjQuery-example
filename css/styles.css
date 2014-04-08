@@ -1,0 +1,64 @@
+body {
+	margin:0;
+	padding:0;
+}
+.page-container {
+	width:80%;
+	margin:0 auto;
+	background:red;
+	clear:both;
+}
+a {
+	text-decoration: none;
+	color:white;
+}
+nav, footer {
+	clear:both;
+	min-height:50px;
+	margin:0;
+	padding:0;
+	width:100%;
+	background: #505050;
+}
+
+.top-nav, .bottom-nav {
+	
+	margin: 0;
+	padding:0;
+	list-style-type:none;
+}
+.top-nav li, .bottom-nav li {
+	display:inline-block;
+	padding:15px;
+	margin-left:10px;
+  
+}
+
+.top-nav li:hover, .bottom-nav li:hover {
+	background:#fff;
+	color:#000000;
+
+}
+.top-nav li:hover a, .bottom-nav li:hover a {
+	color:#000;
+}
+
+.col-1 {
+	float:left;
+	width:70%;
+}
+.col-2 {
+	float: left;
+	width:25%;
+	opacity:1.0;
+}
+
+/*for jquery */
+
+.welcome, .about, .resume {
+	display:none;
+}
+.show {
+	display:block;
+}
+
