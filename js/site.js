@@ -18,7 +18,13 @@ $(document).ready(function() {
   }
   // when clicking on nav link
   // show related page in left column
-  $(".top-nav a").click(showPage);
+  $("nav").on("click", "a", showPage);
+
+
+
+
+
+
 
 
 });
