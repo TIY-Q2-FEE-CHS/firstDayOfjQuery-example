@@ -1,60 +1,24 @@
 $(document).ready(function() {
 
-	var $welcome = $(".welcome");
-	var $about = $(".about");
-	var $resume = $(".resume");
+// callback for click events on page to load hidden divs
+  var showPage = function() {
+      event.preventDefault();
 
+      var $contentDiv = $("." + $(this).attr("rel"));
+
+      console.log($contentDiv);
+      
+      if($contentDiv.hasClass("show")) {
+        return;
+      } else {
+      $contentDiv.siblings().removeClass("show");
+      $contentDiv.addClass("show");
+      }
+
+  }
   // when clicking on nav link
   // show related page in left column
-  $(".welcomeLink").click(function(event) {
-  		event.preventDefault();
-  		if($welcome.hasClass("show")) {
-  			return;
-  		} else {
-  		$welcome.siblings().removeClass("show");
-  			$welcome.addClass("show");
-  		}
-
-  });
-  $(".aboutLink").click(function(event) {
-  		event.preventDefault();
-  		if($about.hasClass("show")) {
-  			return;
-  		} else {
-  		  $about.siblings().removeClass("show");
-  			$about.addClass("show");
-  		}
-
-  });
-  $(".resumeLink").click(function() {
-  		event.preventDefault();
-
-  		if($resume.hasClass("show")) {
-  			return;
-  		} else {
-  			$resume.siblings().removeClass("show");
-  			$resume.addClass("show");
-  		}
-  });
-
-  $( ".animate" ).click(function() {
-  $( ".col-2" ).animate({
-    opacity: "0.0",
-    width: "0%"
-    
-  }, 100, function() {
-    // Animation complete.
-    alert("you are awesome!");
-    // alert("yaaay, you animated me");
-  });
-});
-
-  
-
-
-
-
-
+  $(".top-nav a").click(showPage);
 
 
 });

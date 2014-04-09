@@ -55,7 +55,7 @@ nav, footer {
 
 /*for jquery */
 
-.welcome, .about, .resume {
+.welcome, .about, .resume, .myCats {
 	display:none;
 }
 .show {
