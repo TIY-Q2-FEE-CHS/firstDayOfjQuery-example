@@ -15,7 +15,7 @@ $(document).ready(function() {
       $contentDiv.addClass("show");
       }
 
-  }
+  };
   // when clicking on nav link
   // show related page in left column
   $("nav").on("click", "a", showPage);
