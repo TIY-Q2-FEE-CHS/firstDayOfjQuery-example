@@ -1,7 +1,8 @@
 $(document).ready(function() {
-
+  
   var catsArray = ["Jack", "Smoke", "Dirty", "Stinky", "Hungry", "Simon", "Oscar"];
   var googoo = ["Baby", "Dinosaur"];
+  var imagePaths = ["http://s.ngm.com/2007/12/bizarre-dinosaurs/img/dinosaurs_feature.jpg", "http://s.ngm.com/2007/12/bizarre-dinosaurs/img/dinosaurs_feature.jpg", "http://s.ngm.com/2007/12/bizarre-dinosaurs/img/dinosaurs_feature.jpg", "http://s.ngm.com/2007/12/bizarre-dinosaurs/img/dinosaurs_feature.jpg", "http://s.ngm.com/2007/12/bizarre-dinosaurs/img/dinosaurs_feature.jpg"];
 
 // @param {catsData} array of cats
   var listItemTemplate = function(data) {
@@ -9,18 +10,19 @@ $(document).ready(function() {
         var i;
 
         for(i = 0; i < data.length; i++) {
-          markup += "<li>" + data[i] + "</li>";
+          markup += "<img src=\"" + data[i] + "\" >";
           
         }
-
-        // console.log(markup);
 
         return markup;
 
   };
 
 
-  $(".cats").append(listItemTemplate(catsArray));
+  console.log(listItemTemplate(imagePaths));
+  $(".myCats").append(listItemTemplate(imagePaths));
+
+  // $(".cats").append(listItemTemplate(catsArray));
   
 // callback for click events on page to load hidden divs
   var showPage = function() {
